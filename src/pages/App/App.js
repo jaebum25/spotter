@@ -8,7 +8,7 @@ function App() {
   const [list, setList] = useState([
     {
       id: '1',
-      name: 'Check this out',
+      post: 'Check this out',
       song: 'Song object'
     }
   ])
@@ -17,12 +17,24 @@ function App() {
 
   const handleChange = (evt) => {
     evt.preventDefault()
-    SVGTextPositioningElement(evt.target.value)
+    setPost(evt.target.value)
+  }
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    setId((Math.floor(Math.random()*1000000)).toString())
+    setList([...list, { id, post, song: 'song' }])
+    setPost('')
   }
 
   return (
     <div className="App">
-      <Index list={list}/>
+      <Index 
+        list={list} 
+        handleChange={handleChange} 
+        handleSubmit={handleSubmit}
+        post={post}
+      />
     </div>
   );
 }
