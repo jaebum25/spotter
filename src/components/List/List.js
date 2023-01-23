@@ -1,7 +1,7 @@
 import React from 'react'
 import Row from '../Row/Row'
 
-export default function List({ list }) {
+export default function List({ list, handleDelete }) {
   return (
     <>
       <table className="pure-table pure-table-striped">
@@ -13,7 +13,7 @@ export default function List({ list }) {
             </th>
           </tr>
         </thead>
-        {list.map(post => <Row key={post.id} post={post} />)}
+        {list.map(post => <Row key={post.id} post={post} handleDelete={handleDelete}/>)}
       </table>
     </>
   )

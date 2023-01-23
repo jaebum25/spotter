@@ -8,23 +8,28 @@ function App() {
   const [list, setList] = useState([
     {
       id: '1',
-      post: 'Check this out',
+      name: 'Check this out',
       song: 'Song object'
     }
   ])
   const [id, setId] = useState('')
-  const [post, setPost] = useState('')
+  const [name, setName] = useState('')
 
   const handleChange = (evt) => {
     evt.preventDefault()
-    setPost(evt.target.value)
+    setName(evt.target.value)
   }
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
     setId((Math.floor(Math.random()*1000000)).toString())
-    setList([...list, { id, post, song: 'song' }])
-    setPost('')
+    setList([...list, { id, name, song: 'song' }])
+    setName('')
+  }
+
+  const handleDelete = (id) => {
+    setList(list.filter(post => post.id !== id))
+    console.log('delete button works')
   }
 
   return (
@@ -33,7 +38,8 @@ function App() {
         list={list} 
         handleChange={handleChange} 
         handleSubmit={handleSubmit}
-        post={post}
+        handleDelete={handleDelete}
+        name={name}
       />
     </div>
   );
