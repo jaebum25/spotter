@@ -3,10 +3,7 @@ import Feed from '../../components/Feed/Feed'
 import { useState } from 'react'
 
 export default function NewPostPage() {
-  const [feed, setFeed] = useState([{
-    id: '1',
-    name: 'test'
-  }])
+  const [feed, setFeed] = useState([])
   const [id, setId] = useState('')
   const [name, setName] = useState('')
 
