@@ -1,48 +1,29 @@
 import { useState } from 'react';
-
+import { Routes, Route } from 'react-router-dom';
+import { getUser } from "../../utilities/users-service"
 import './App.css';
-import Index from '../Index/Index'
+import AuthPage from '../AuthPage/AuthPage';
+import NewPostPage from '../NewPostPage/NewPostPage';
+import PostHistoryPage from '../PostHistoryPage/PostHistoryPage';
+import NavBar from '../../components/NavBar/NavBar';
 
-function App() {
-  const [user, setUser] = useState(null)
-  const [list, setList] = useState([
-    {
-      id: '1',
-      name: 'Check this out',
-      song: 'Song object'
-    }
-  ])
-  const [id, setId] = useState('')
-  const [name, setName] = useState('')
+export default function App() {
 
-  const handleChange = (evt) => {
-    evt.preventDefault()
-    setName(evt.target.value)
-  }
-
-  const handleSubmit = (evt) => {
-    evt.preventDefault()
-    setId((Math.floor(Math.random()*1000000)).toString())
-    setList([...list, { id, name, song: 'song' }])
-    setName('')
-  }
-
-  const handleDelete = (id) => {
-    setList(list.filter(post => post.id !== id))
-    console.log('delete button works')
-  }
+  const [user, setUser] = useState(getUser())
 
   return (
-    <div className="App">
-      <Index 
-        list={list} 
-        handleChange={handleChange} 
-        handleSubmit={handleSubmit}
-        handleDelete={handleDelete}
-        name={name}
-      />
-    </div>
+    <main className="App">
+      { user ? (
+      <>
+        <NavBar user={user} setUser={setUser}/>
+        <Routes>
+          <Route path="/posts/new" element={<NewPostPage />}/>
+          <Route path="/posts" element={<PostHistoryPage />}/>
+        </Routes>
+      </>
+      ) : (
+        <AuthPage setUser={setUser}/>
+      )}
+    </main>
   );
 }
-
-export default App;
