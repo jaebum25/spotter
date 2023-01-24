@@ -1,11 +1,21 @@
 import Feed from '../../components/Feed/Feed'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 export default function NewPostPage() {
   const [feed, setFeed] = useState([])
   const [id, setId] = useState('')
   const [name, setName] = useState('')
+  const [clicked, setClicked] = useState(false)
+
+  useEffect(() => {
+    async function fetchData() {
+      let res = await axios.get('/api/posts')
+      setFeed(res.data)
+    }
+    fetchData()
+  }, [clicked]);
 
   const handleChange = (evt) => {
     evt.preventDefault()
@@ -17,10 +27,14 @@ export default function NewPostPage() {
     setId((Math.floor(Math.random()*1000000)).toString())
     setFeed([...feed, { id, name }])
     setName('')
+    axios.post('/api/posts', {id, name})
+    setClicked(!clicked)
   }
 
   const handleDelete = (id) => {
     setFeed(feed.filter(post => post.id !== id))
+    axios.delete(`/api/posts/${id}`)
+    setClicked(!clicked)
   }
 
   return (
