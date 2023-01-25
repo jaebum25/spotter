@@ -9,7 +9,8 @@ module.exports = {
 // Show all of my posts in the list at page load
 async function index(req, res) {
   try {
-  let posts = await Post.find({})
+  let posts = await Post.find({}).populate('user')
+  // console.log(posts)
   res.status(200).json(posts)
   } catch(err) {
     console.log(err)
@@ -19,6 +20,7 @@ async function index(req, res) {
 // create will activate when i click add post
 async function create(req, res) {
   // create from req.body
+  // console.log(req.body)
   await Post.create(req.body)
   res.status(200).json('Done')
 }
@@ -26,6 +28,7 @@ async function create(req, res) {
 async function deletePost(req, res) {
   // id of the todo which will be passed in the route
 
+  // console.log(req.params.id)
   await Post.findByIdAndDelete(req.params.id)
   res.status(200).json('Done')
 }

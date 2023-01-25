@@ -1,17 +1,24 @@
 import React from 'react'
 import FeedPost from "../FeedPost/FeedPost"
 
-export default function Feed({ feed,handleDelete }) {
+export default function Feed({ feed, handleDelete, user }) {
   return (
     <>
       <table>
         <thead>
           <tr>
-            <th>Feed</th>
-            <th>hello</th>
+            <th>Name</th>
+            <th>Post</th>
+            <th>x</th>
           </tr>
         </thead>
-          {feed.map(post => <FeedPost key={post.id} post={post} handleDelete={handleDelete}/>)}
+          {feed.map(post => 
+            <FeedPost 
+            key={post._id} 
+            post={post} 
+            handleDelete={handleDelete}
+            user={user} 
+          />)}
       </table>
     </>
   )

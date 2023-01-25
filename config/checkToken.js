@@ -1,8 +1,10 @@
 const jwt = require('jsonwebtoken');
 
 module.exports = function(req, res, next) {
+  console.log('helloo')
   // Check for the token being sent in a header or as a query parameter
   let token = req.get('Authorization') || req.query.token;
+  console.log(token)
   if (token) {
     // Remove the 'Bearer ' if it was included in the token header
     token = token.replace('Bearer ', '');
@@ -10,7 +12,9 @@ module.exports = function(req, res, next) {
     jwt.verify(token, process.env.SECRET, function(err, decoded) {
       // If valid token, decoded will be the token's entire payload
       // If invalid token, err will be set
-      req.user = err ? null : decoded.user;  
+      req.user = err ? null : decoded.user;
+      console.log(req.user)  
+      console.log(err)  
       // If your app cares... (optional)
       req.exp = err ? null : new Date(decoded.exp * 1000);  
       return next();
