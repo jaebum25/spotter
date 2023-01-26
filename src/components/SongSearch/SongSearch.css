@@ -1,13 +1,28 @@
 div .SongSearch {
   border: 1px solid gray;
   border-radius: 2vmin;
-  margin: 25px;
+  margin: 55px 5px;
   background-color: white;
 }
 
 ul {
-  text-align: left;
   list-style: none;
+  text-align: left;
+}
+
+li {
+  margin: 0.3vmin;
+  display: flex;
+  justify-content: space-between;
+}
+
+li > span {
+  padding: 10px;
+}
+
+li > button {
+  margin: 0px 5px;
+
 }
 
 div > input {
@@ -18,6 +33,7 @@ div .lol {
   color: rgb(132, 179, 255)
 }
 
-input {
+div > input {
   background-color: rgb(238, 238, 238);
+  margin: 10px;
 }

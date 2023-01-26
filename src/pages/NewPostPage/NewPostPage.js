@@ -27,8 +27,9 @@ export default function NewPostPage({ user }) {
   const handleSubmit = (evt) => {
     evt.preventDefault()
     setId((Math.floor(Math.random()*1000000)).toString())
-    // setFeed([{ id, name, user: user }, ...feed ])
+    // setFeed([{ id, name, user }, ...feed ])
     setName('')
+    // axios.post('/api/posts', {id, name, user})
     axios.post('/api/posts', {id, name, user: user._id})
     setClicked(!clicked)
   }

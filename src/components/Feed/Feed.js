@@ -12,7 +12,7 @@ export default function Feed({ feed, handleDelete, user }) {
             post={post} 
             handleDelete={handleDelete}
             user={user} 
-          />)}
+          />).reverse()}
       </table>
     </div>
   )

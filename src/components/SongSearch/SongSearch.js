@@ -50,7 +50,7 @@ export default function SongSearch() {
           <ul>
             {posts.map(post => ( 
               <li key={post.id}>
-              {post.artist.name} - {post.title} 
+              <span>{post.artist.name} - {post.title}</span>
             <button onClick={() => {navigator.clipboard.writeText(post.artist.name + ' - ' + post.title)}}>copy</button>
           </li>
         ))}
