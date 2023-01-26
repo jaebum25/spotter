@@ -46,7 +46,7 @@ export default function SongSearch() {
       <button onClick={handleClick}>Search</button>
       {id === 'Nickelback' ? (
         <>
-          <div>Don't like Nickelback? Start search!</div>
+          <div className="lol">Don't like Nickelback? Start search!</div>
           <ul>
             {posts.map(post => ( 
               <li key={post.id}>

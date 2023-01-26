@@ -14,3 +14,9 @@ td {
 td div {
   text-align: right;
 }
+
+div .postbtn > button {
+  background-color: white;
+  color: var(--orange);
+  
+}

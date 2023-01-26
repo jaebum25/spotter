@@ -10,7 +10,13 @@ export default function FeedPost({ post, handleDelete, user }) {
             <>@{post.user.name} </>
             <br/>
             {post.name}
-            <div>
+            <div className="postbtn">
+              {new Date(post.createdAt).toLocaleTimeString([], 
+                {year: 'numeric', 
+                month: 'numeric', 
+                day: 'numeric', 
+                hour: 'numeric', 
+                minute: '2-digit'})}
               { user.name === post.user.name ? <button onClick={() => handleDelete(post._id)}>X</button> : null}
             </div>
           </td>
