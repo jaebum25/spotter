@@ -70,7 +70,7 @@ export default function NewPostPage({ user }) {
       </div>
       <div className="box3">
         <form onSubmit={handleSubmit}>
-          <input placeholder='What you listening to?' type="text" name="name" value={name} onChange={handleChange}/>
+          <input placeholder='What are you listening to?' type="text" name="name" value={name} onChange={handleChange}/>
           <button>Post</button>
         </form>
         <Feed 

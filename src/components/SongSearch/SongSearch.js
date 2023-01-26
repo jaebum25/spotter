@@ -39,7 +39,7 @@ export default function SongSearch() {
       console.log(err, "err")
     })
   }, [idClick])
-
+  
   return (
     <div className="SongSearch">
       <input type="text" value={id} placeholder="Artist name" onChange={handleChange} />

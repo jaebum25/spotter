@@ -2,6 +2,7 @@ div .SongSearch {
   border: 1px solid gray;
   border-radius: 2vmin;
   margin: 25px;
+  background-color: white;
 }
 
 ul {
@@ -11,4 +12,8 @@ ul {
 
 div > input {
   width: 66%;
+}
+
+input {
+  background-color: rgb(238, 238, 238);
 }
