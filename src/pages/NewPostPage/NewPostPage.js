@@ -3,6 +3,7 @@ import Feed from '../../components/Feed/Feed'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import SongSearch from '../../components/SongSearch/SongSearch'
+import './NewPostPage.css'
 
 export default function NewPostPage({ user }) {
   const [feed, setFeed] = useState([])
@@ -57,29 +58,30 @@ export default function NewPostPage({ user }) {
   }
 
   return (
-    <>
-      <h1>New Post Page</h1>
-      <form className="pure-form" onSubmit={handleSubmit}>
-        <label>Feed:</label>
-        <input type="text" name="name" value={name} onChange={handleChange}/>
-        <button className="pure-button">Post</button>
-      </form>
-      <hr/>
-      <Feed 
-        feed={feed} 
-        handleSubmit={handleSubmit} 
-        handleChange={handleChange} 
-        name={name} 
-        handleDelete={handleDelete}
-        user={user}
-      />
-      <SongSearch 
-        handleSubmit={handleSubmit} 
-        handleChange={handleChange} 
-        handleSearch={handleSearch}
-        name={name} 
-        user={user}
-      />
-    </>
+    <div className="wrapper">
+      <div className="box2">
+        <SongSearch 
+          handleSubmit={handleSubmit} 
+          handleChange={handleChange} 
+          handleSearch={handleSearch}
+          name={name} 
+          user={user}
+        />
+      </div>
+      <div className="box3">
+        <form onSubmit={handleSubmit}>
+          <input placeholder='What you listening to?' type="text" name="name" value={name} onChange={handleChange}/>
+          <button>Post</button>
+        </form>
+        <Feed 
+          feed={feed} 
+          handleSubmit={handleSubmit} 
+          handleChange={handleChange} 
+          name={name} 
+          handleDelete={handleDelete}
+          user={user}
+        />
+      </div>
+    </div>
   )
 }

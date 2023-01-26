@@ -1,10 +1,10 @@
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
+  --tan-1: #494949;
+  --tan-2: #656565;
+  --tan-3: #504e4c;
+  --tan-4: #000000;
+  --orange: #303030;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -91,8 +91,7 @@ p.error-message {
 
 form {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1.25vmin;
+  grid-template-columns: 10fr 1fr;
   color: var(--text-light);
 }
 
@@ -104,7 +103,7 @@ label {
 
 input {
   padding: 1vmin;
-  font-size: 2vmin;
+  /* font-size: 1.25vmin; */
   border: .1vmin solid var(--tan-3);
   border-radius: .5vmin;
   color: var(--text-dark);
@@ -118,10 +117,10 @@ input:focus {
 
 button, a.button {
   margin: 1vmin;
-  padding: 1vmin;
+  padding: 0.5vmin;
   color: var(--white);
   background-color: var(--orange);
-  font-size: 2vmin;
+  /* font-size: 1.25vmin; */
   font-weight: bold;
   text-decoration: none;
   text-align: center;

@@ -1,0 +1,15 @@
+tr {
+  color: white;
+}
+
+td {
+  width: 1000px;
+  text-align: left;
+  border: 1px solid gray;
+  border-radius: 2vmin;
+  padding: 15px;
+}
+
+td div {
+  text-align: right;
+}

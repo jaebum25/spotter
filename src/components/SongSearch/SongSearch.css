@@ -1,0 +1,14 @@
+div .SongSearch {
+  border: 1px solid gray;
+  border-radius: 2vmin;
+  margin: 25px;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
+div > input {
+  width: 66%;
+}

@@ -1,17 +1,11 @@
 import React from 'react'
 import FeedPost from "../FeedPost/FeedPost"
+import './Feed.css'
 
 export default function Feed({ feed, handleDelete, user }) {
   return (
-    <>
+    <div className="Feed">
       <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Post</th>
-            <th>x</th>
-          </tr>
-        </thead>
           {feed.map(post => 
             <FeedPost 
             key={post._id} 
@@ -20,6 +14,6 @@ export default function Feed({ feed, handleDelete, user }) {
             user={user} 
           />)}
       </table>
-    </>
+    </div>
   )
 }
