@@ -10,9 +10,9 @@ export default function NavBar({ post, user, setUser }) {
   return (
     <nav>
       <Link to="/posts/new">Home</Link>
-      &nbsp; | &nbsp;
+      &nbsp; &nbsp; &nbsp;
       <Link to="/posts">{user.name}'s Page</Link>
-      &nbsp; | &nbsp;
+      &nbsp; &nbsp; &nbsp;
       <Link to="" onClick={handleLogout}>Log Out</Link>
     </nav>
   );

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--white);
-  border-radius: 2vmin;
+  border-radius: 2vmin
 }
 
 .AuthPage h3 {
@@ -12,4 +12,10 @@
   text-align: center;
   color: var(--text-light);
   cursor: pointer;
+  border-radius: vmin;
+  padding: 55px 0px;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  background-color: var(--tan-4);
 }

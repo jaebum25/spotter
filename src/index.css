@@ -78,6 +78,7 @@ code {
 }
 
 .form-container {
+  margin: 3vmin;
   padding: 3vmin;
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
@@ -91,7 +92,7 @@ p.error-message {
 
 form {
   display: grid;
-  grid-template-columns: 10fr 1fr;
+  grid-template-columns: 3fr 1fr;
   color: var(--text-light);
 }
 
