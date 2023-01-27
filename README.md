@@ -23,7 +23,7 @@ In dedication to my search for new music, I hope you are able to explore and enj
 <img src="public/images/homepage.png" width="1000">
 
 #### Signup Page
-<img src="public/images/signuppage.png" width="1000">
+<img src="public/images/Signuppage.png" width="1000">
 
 #### Login Page
 <img src="public/images/loginpage.png" width="1000">
