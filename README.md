@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Title: Spotter
+Creator: Brian Lee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Check it out https://brians-spotter.herokuapp.com
 
-## Available Scripts
+## Patch v1 Notes
 
-In the project directory, you can run:
+This is the initial launch of Spotter.
 
-### `npm start`
+A microblogging service app that uses Deezer API to search through your favorite artist's discography.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Background info:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a project I started for a Software Engineering bootcamp @GeneralAssembly.
+Spotter is inspired by Twitter and Spotify.
+In dedication to my search for new music, I hope you are able to explore and enjoy.
 
-### `npm test`
+## Description:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Theme: Twttter-esque
 
-### `npm run build`
+#### Home Page 
+<img src="public/images/homepage.png" width="1000">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Signup Page
+<img src="public/images/signuppage.png" width="1000">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Login Page
+<img src="public/images/loginpage.png" width="1000">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Pre-work
 
-### `npm run eject`
+### Trello link:
+https://trello.com/b/eB5kV7VS/react-spotter-ass4
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Initial ERD and Wireframe
+https://lucid.app/lucidchart/d7ce2eec-9e48-4f5c-8ded-7263209c7404/edit?viewport_loc=217%2C-112%2C1381%2C1670%2C0_0&invitationId=inv_e67e1243-7030-4389-875b-40800beb23a1
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Icebox Summary (Details in Trello link above):
+Next steps here are to:
+1. Bring in album pictures
+2. Connect the search function with the post input
+3. Setup user page with user only posts
+4. Add review functionality
+5. Add favorites page?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies used:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React.js, MongoDB, Mongoose, Express.js, Node.js, Javascript, HTML, CSS, Deezer API, MongoDB Atlas, Heroku
 
-## Learn More
+## Credits:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Google Fonts
