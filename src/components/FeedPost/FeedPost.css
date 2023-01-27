@@ -1,5 +1,6 @@
 tr {
   color: gray;
+  
 }
 
 td {
@@ -9,12 +10,14 @@ td {
   border-radius: 2vmin;
   padding: 10px;
   background-color: white;
+  
 }
 
 td div {
   text-align: right;
   padding-top: 10px;
   font-size: 11px;
+  
 }
 
 div .postbtn > button {
@@ -24,4 +27,5 @@ div .postbtn > button {
   border: none;
   padding: 3px 3px;
   margin: 0 3px;
+  
 }

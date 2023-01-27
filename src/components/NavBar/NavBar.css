@@ -1,8 +1,12 @@
 nav {
   background-color:white;
   padding: 20px;
+  
   border-radius: 3vmin;
   width: 100%;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 a {
@@ -12,4 +16,16 @@ a {
   border-radius: 2vmin;
   padding: 10px;
   text-decoration: none;
+  border: 1px solid #00bbfe;
+}
+
+img {
+  width: 50px;
+  padding: 2px;
+  border: 1px solid #00bbfe;
+  display: flex;
+  border-radius: 3vmin;
+  position: absolute;
+  top: 4px;
+  left: 4px;
 }

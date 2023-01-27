@@ -104,11 +104,10 @@ label {
 
 input {
   padding: 1vmin;
-  /* font-size: 1.25vmin; */
   border: .1vmin solid var(--tan-3);
   border-radius: .5vmin;
   color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
+  background-image: none !important;
   outline: none;
 }
 
@@ -117,15 +116,13 @@ input:focus {
 }
 
 button, a.button {
-  /* margin: 1vmin; */
   padding: 0.5vmin;
   color: var(--white);
   background-color: var(--orange);
-  /* font-size: 1.25vmin; */
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: 1px solid #00bbfe;
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;

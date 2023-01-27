@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   grid-auto-rows: 50px;
   border-radius: 2vmin;
   color: gray;
@@ -33,10 +33,12 @@ form {
 form > input {
   height: 60px;
   background-color: rgb(238, 238, 238);
+  
 }
 
 form > button {
   margin: 5px;
   padding: 10px;
   border-radius: 3vmin;
+  border: 1px solid #00bbfe;
 }
